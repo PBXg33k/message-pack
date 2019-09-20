@@ -1,0 +1,23 @@
+{
+    "name": "pbx_g33k/message-pack",
+    "description": "Collection of Messages for microservices",
+    "type": "library",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Oguzhan Uysal",
+            "email": "development@oguzhanuysal.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pbxg33k\\MessagePack\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    }
+}
