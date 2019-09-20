@@ -17,28 +17,28 @@ class CalculateFileHashesMessage extends FileMessage
         parent::__construct($javFileId);
     }
 
-    public function hasMd5()
+    public function hasMd5(): bool
     {
         return $this->isFlagSet(self::HASH_MD5);
     }
 
-    public function hasSha1()
+    public function hasSha1(): bool
     {
         return $this->isFlagSet(self::HASH_SHA1);
     }
 
-    public function hasSha512()
+    public function hasSha512(): bool
     {
         return $this->isFlagSet(self::HASH_SHA512);
     }
 
-    public function hasXxhash()
+    public function hasXxhash(): bool
     {
         return $this->isFlagSet(self::HASH_XXHASH);
     }
 
-    private function isFlagSet($flag)
+    private function isFlagSet($flag): bool
     {
-        return ($this->hashFlags & $flag) == $flag;
+        return ($this->hashFlags & $flag) === $flag;
     }
 }
