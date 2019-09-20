@@ -2,15 +2,8 @@
 
 namespace Pbxg33k\MessagePack\Message;
 
-use Symfony\Component\Finder\SplFileInfo;
-
 class ScanFileMessage
 {
-    /**
-     * @var SplFileInfo
-     */
-    private $fileInfo;
-
     private $file;
 
     private $relativePath;
@@ -49,17 +42,5 @@ class ScanFileMessage
     public function getRelativePathname(): string
     {
         return $this->relativePathname;
-    }
-
-    /**
-     * @return SplFileInfo
-     */
-    public function constructFileInfo(): SplFileInfo
-    {
-        if (!$this->fileInfo) {
-            $this->fileInfo = new SplFileInfo($this->file, $this->relativePath, $this->relativePathname);
-        }
-
-        return $this->fileInfo;
     }
 }
