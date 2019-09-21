@@ -6,10 +6,10 @@ class CheckVideoMessage extends FileMessage
 {
     private $callback;
 
-    public function __construct(int $javFileId, callable $callback = null)
+    public function __construct(string $path, callable $callback = null)
     {
         $this->callback = $callback;
-        parent::__construct($javFileId);
+        parent::__construct($path);
     }
 
     /**

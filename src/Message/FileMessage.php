@@ -5,20 +5,20 @@ namespace Pbxg33k\MessagePack\Message;
 abstract class FileMessage
 {
     /**
-     * @var int
+     * @var string
      */
-    private $javFileId;
+    private $path;
 
-    public function __construct(int $javFileId)
+    public function __construct(string $path)
     {
-        $this->javFileId = $javFileId;
+        $this->path = $path;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getJavFileId(): int
+    public function getPath()
     {
-        return $this->javFileId;
+        return $this->path;
     }
 }

@@ -5,6 +5,8 @@ use PHPUnit\Framework\TestCase;
 
 class CheckVideoMessageTest extends TestCase
 {
+    private const PATH = "fictive/path";
+
     private $callable;
 
     private $subject;
@@ -12,7 +14,7 @@ class CheckVideoMessageTest extends TestCase
     protected function setUp(): void
     {
         $this->callable = static function() {};
-        $this->subject = new CheckVideoMessage(0, $this->callable);
+        $this->subject = new CheckVideoMessage(self::PATH, $this->callable);
     }
 
     public function testGetCallback()

@@ -5,6 +5,8 @@ use PHPUnit\Framework\TestCase;
 
 class CalculateFileHashesMessageTest extends TestCase
 {
+    private const PATH = "fictive/path";
+
     private $emptyMessage;
     private $md5Message;
     private $sha1Message;
@@ -15,12 +17,12 @@ class CalculateFileHashesMessageTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->emptyMessage = new CalculateFileHashesMessage(0);
-        $this->md5Message = new CalculateFileHashesMessage(0, CalculateFileHashesMessage::HASH_MD5);
-        $this->sha1Message = new CalculateFileHashesMessage(0, CalculateFileHashesMessage::HASH_SHA1);
-        $this->sha512Message = new CalculateFileHashesMessage(0, CalculateFileHashesMessage::HASH_SHA512);
-        $this->xxhashMessage = new CalculateFileHashesMessage(0, CalculateFileHashesMessage::HASH_XXHASH);
-        $this->md5AndxxhashMessage = new CalculateFileHashesMessage(0, CalculateFileHashesMessage::HASH_MD5 | CalculateFileHashesMessage::HASH_XXHASH);
+        $this->emptyMessage = new CalculateFileHashesMessage(self::PATH);
+        $this->md5Message = new CalculateFileHashesMessage(self::PATH, CalculateFileHashesMessage::HASH_MD5);
+        $this->sha1Message = new CalculateFileHashesMessage(self::PATH, CalculateFileHashesMessage::HASH_SHA1);
+        $this->sha512Message = new CalculateFileHashesMessage(self::PATH, CalculateFileHashesMessage::HASH_SHA512);
+        $this->xxhashMessage = new CalculateFileHashesMessage(self::PATH, CalculateFileHashesMessage::HASH_XXHASH);
+        $this->md5AndxxhashMessage = new CalculateFileHashesMessage(self::PATH, CalculateFileHashesMessage::HASH_MD5 | CalculateFileHashesMessage::HASH_XXHASH);
     }
 
     public function testHasSha512()
@@ -35,7 +37,7 @@ class CalculateFileHashesMessageTest extends TestCase
 
     public function testGetJavFileId()
     {
-        $this->assertSame(0, $this->emptyMessage->getJavFileId());
+        $this->assertSame(self::PATH, $this->emptyMessage->getPath());
     }
 
     public function testHasMd5()
