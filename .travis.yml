@@ -5,11 +5,11 @@ php:
 
 install:
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev -vvv
+  - php composer.phar install --dev
 before_script:
   - mkdir -p build/logs
   - chmod +x bin/phpunit
 script:
   - bin/phpunit --coverage-clover build/logs/clover.xml
 after_success:
-  - travis_retry bin/coveralls -v
+  - travis_retry vendor/php-coveralls/php-coveralls/bin/coveralls -v
