@@ -5,7 +5,7 @@ php:
 
 install:
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev
+  - php composer.phar install --dev -vvv
 before_script:
   - mkdir -p build/logs
   - chmod +x bin/phpunit
