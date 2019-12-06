@@ -14,11 +14,6 @@ class VideoCheckedMessage extends FileMessage
      */
     private $consistent;
 
-    public function __construct(string $path)
-    {
-        parent::__construct($path);
-    }
-
     /**
      * @return bool
      */
