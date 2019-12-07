@@ -33,9 +33,9 @@ class PersistVideoStatusMessage extends FileMessage
 
     /**
      * @param bool $checked
-     * @return VideoCheckedMessage
+     * @return PersistVideoStatusMessage
      */
-    public function setChecked(bool $checked): VideoCheckedMessage
+    public function setChecked(bool $checked): PersistVideoStatusMessage
     {
         $this->checked = $checked;
         return $this;
@@ -51,9 +51,9 @@ class PersistVideoStatusMessage extends FileMessage
 
     /**
      * @param bool $consistent
-     * @return VideoCheckedMessage
+     * @return PersistVideoStatusMessage
      */
-    public function setConsistent(bool $consistent): VideoCheckedMessage
+    public function setConsistent(bool $consistent): PersistVideoStatusMessage
     {
         $this->consistent = $consistent;
         return $this;
