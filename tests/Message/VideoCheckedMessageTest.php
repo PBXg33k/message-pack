@@ -8,16 +8,15 @@ class VideoCheckedMessageTest extends TestCase
     /**
      * @var VideoCheckedMessage
      */
-    private $subject;
+    protected $subject;
 
-    private $path;
+    protected $path;
 
     protected function setUp(): void
     {
-        $this->path = (string)sha1(mt_rand(100,1000));
+        $this->path = '/test/path.mp4';
         $this->subject = new VideoCheckedMessage($this->path);
     }
-
 
     public function testPath()
     {
