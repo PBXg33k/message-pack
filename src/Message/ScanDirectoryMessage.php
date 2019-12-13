@@ -2,7 +2,7 @@
 
 namespace Pbxg33k\MessagePack\Message;
 
-class ScanDirectoryMessage
+class ScanDirectoryMessage extends FileMessage
 {
 
 }
