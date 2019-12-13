@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DTO;
+namespace Pbxg33k\MessagePack\DTO;
 
 class TagDTO
 {
