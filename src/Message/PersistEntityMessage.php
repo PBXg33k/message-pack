@@ -9,7 +9,7 @@ class PersistEntityMessage
      */
     private $object;
 
-    public function __construct(object $object)
+    public function __construct($object)
     {
         $this->object = $object;
     }
@@ -26,7 +26,7 @@ class PersistEntityMessage
      * @param object $object
      * @return PersistEntityMessage
      */
-    public function setObject(object $object): PersistEntityMessage
+    public function setObject($object): PersistEntityMessage
     {
         $this->object = $object;
         return $this;
