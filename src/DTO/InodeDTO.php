@@ -7,85 +7,85 @@ class InodeDTO
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      */
-    private $md5;
+    public $md5;
 
     /**
      * @var string
      */
-    private $sha1;
+    public $sha1;
 
     /**
      * @var string
      */
-    private $sha512;
+    public $sha512;
 
     /**
      * @var string
      */
-    private $xxhash;
+    public $xxhash;
 
     /**
      * @var bool
      */
-    private $checked = false;
+    public $checked = false;
 
     /**
      * @var int
      */
-    private $height;
+    public $height;
 
     /**
      * @var int
      */
-    private $width;
+    public $width;
 
     /**
      * @var float
      */
-    private $fps;
+    public $fps;
 
     /**
      * @var bool
      */
-    private $codec;
+    public $codec;
 
     /**
      * @var bool
      */
-    private $consistent;
+    public $consistent;
 
     /**
      * @var mixed
      */
-    private $meta;
+    public $meta;
 
     /**
      * @var int
      */
-    private $length;
+    public $length;
 
     /**
      * @var int
      */
-    private $bitrate;
+    public $bitrate;
 
     /**
      * @var integer
      */
-    private $filesize;
+    public $filesize;
 
     /**
      * @var bool
      */
-    private $processed = false;
+    public $processed = false;
 
     /**
      * @var JavFileDTO[]
      */
-    private $javFiles = [];
+    public $javFiles = [];
 }

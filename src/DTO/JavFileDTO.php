@@ -7,30 +7,30 @@ class JavFileDTO
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var int
      */
-    private $part;
+    public $part;
 
     /**
      * @var string
      */
-    private $filename;
+    public $filename;
 
     /**
      * @var string
      */
-    private $path;
+    public $path;
 
     /**
      * @var TitleDTO
      */
-    private $title;
+    public $title;
 
     /**
      * @var InodeDTO
      */
-    private $inode;
+    public $inode;
 }

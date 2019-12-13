@@ -7,20 +7,20 @@ class ImageDTO
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      */
-    private $filename;
+    public $filename;
 
     /**
      * @var string
      */
-    private $uri;
+    public $uri;
 
     /**
      * @var ModelDTO[]
      */
-    private $models = [];
+    public $models = [];
 }

@@ -7,10 +7,10 @@ class TagDTO
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      */
-    private $name;
+    public $name;
 }

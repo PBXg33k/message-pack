@@ -7,30 +7,30 @@ class ModelDTO
     /**
      * @var int
      */
-    private $id;
+    public $id;
 
     /**
      * @var string
      */
-    private $name_romaji;
+    public $name_romaji;
 
     /**
      * @var string
      */
-    private $name_japanese;
+    public $name_japanese;
 
     /**
      * @var ModelAliasDTO[]
      */
-    private $aliases = [];
+    public $aliases = [];
 
     /**
      * @var TitleDTO[]
      */
-    private $titles = [];
+    public $titles = [];
 
     /**
      * @var ImageDTO[]
      */
-    private $images = [];
+    public $images = [];
 }
