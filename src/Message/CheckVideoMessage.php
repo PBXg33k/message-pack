@@ -19,12 +19,12 @@ class CheckVideoMessage extends FileMessage
      */
     private $videoLength;
 
-    public function __construct(string $path, callable $callback = null, bool $strict = true, ?int $videoLength = null)
+    public function __construct(string $path, callable $callback = null, bool $strict = true, ?int $videoLength = null, ?int $id = null)
     {
         $this->callback = $callback;
         $this->strict = $strict;
         $this->videoLength = $videoLength;
-        parent::__construct($path);
+        parent::__construct($path, $id);
     }
 
     /**

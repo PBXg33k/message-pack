@@ -3,48 +3,29 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - N/A
-
-## [0.0.4] - 2017-04-02
 ### Added
-- PHP 7 Support, supported PHP 5.6 and above
-- Command line tools (using symfony/command)
-    - Lookup artist `music-info:search:artist <name> [<service>]`
-    - Lookup track `music-info:search:track <name> [<service>]`
-- Models
-    - Album
-- Spotify
-    - Track
-
+- `FileMessage` and descendants
+  - Added jav_file_id property
+    - This property can be used to download file from JavToolBoxApi_app
+- `PersistVideoStatusMessage`
 ### Changed
-- HTTP Proxy Header vulnerability fix
+- `CheckedVideoMessage`
+  - Added `bool` strict property
+  - Added `?int` videoLength property
+  
 
-## [0.0.3]
+## [0.3] - 2019-12-05
 ### Added
-- Spotify
-    - Album
+- `VideoCheckedMessage`
 
+## [0.2] - 2019-09-21
 ### Changed
-- Dependencies
-- _internal_ Unit tests
+- Messages accept paths instead of entity ids
 
-### Removed
-- **PHP 5.5 Support**
-
-## [0.0.2] - 2016-12-01
-### Added
-- Spotify
-	- Tracks
-
-### Changed
-- Improved tests
-
-## 0.0.1 - 2016-05-16
+## 0.1 - 2019-09-21
 ### Added
 - Core
-- VocaDB
-	- Artist
-- Spotify
-	- Artist
-- Unit tests
 
-[Unreleased]: https://github.com/PBXg33k/message-pack/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/PBXg33k/message-pack/compare/v0.3...HEAD
+[0.3]: https://github.com/PBXg33k/message-pack/compare/v0.2...v0.3
+[0.2]: https://github.com/PBXg33k/message-pack/compare/v0.1...v0.2

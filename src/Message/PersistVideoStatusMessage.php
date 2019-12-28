@@ -16,9 +16,9 @@ class PersistVideoStatusMessage extends FileMessage
      */
     private $consistent;
 
-    public function __construct(string $path, bool $checked, bool $consistent)
+    public function __construct(string $path, bool $checked, bool $consistent, ?int $id = null)
     {
-        parent::__construct($path);
+        parent::__construct($path, $id);
         $this->setChecked($checked);
         $this->setConsistent($consistent);
     }

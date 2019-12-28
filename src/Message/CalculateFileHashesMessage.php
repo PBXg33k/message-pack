@@ -11,10 +11,10 @@ class CalculateFileHashesMessage extends FileMessage
     public const HASH_SHA512 = 4;
     public const HASH_XXHASH = 8;
 
-    public function __construct(string $path, int $hashMethods = 0)
+    public function __construct(string $path, int $hashMethods = 0, ?int $id = null)
     {
         $this->hashFlags = $hashMethods;
-        parent::__construct($path);
+        parent::__construct($path, $id);
     }
 
     public function hasMd5(): bool
